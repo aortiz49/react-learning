@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>React - The Complete Guide</title>
+  <title></title>
   <style>
   @font-face {
   font-family: octicons-link;
@@ -1202,8 +1202,9 @@ pre[class*="language-"] {
 </head>
 <body>
   <article class="markdown-body"><h1 class="atx" id="react---the-complete-guide">React - The Complete Guide</h1>
-<p> by <em>Andy Ortiz</em> based on the course by <em>Maximilian Schwarzmüller</em> ❤️</p>
-<h2 class="atx" id="components">Components</h2>
+<p>Made by Andy Ortiz with ❤️</p>
+<p>Based on course by <em>Maximilian Schwarzmüller</em></p>
+<h2 class="atx" id="react-basics-amp-working-with-components">React Basics &amp; Working With Components</h2>
 <p>React is a JavaScript library for building user interfaces. We use library like React because they simplify the development.</p>
 <ul>
 <li>React makes building <strong>complex</strong>, <strong>interactive</strong>, and <strong>reactive</strong> interfaces simpler.</li>
@@ -1226,11 +1227,12 @@ pre[class*="language-"] {
 </ul>
 <p>Splitting big chunks of code into smaller components allows us to streamline development.</p>
 <h3 class="atx" id="how-is-a-component-built">How is a Component built?</h3>
-<img data-align="center" width="527" alt="Screen Shot 2022-05-26 at 12.20.08 AM.png" src="file:///Users/renegade/Library/Application%20Support/marktext/images/126b6ee73dc9fabea3e498dee884c6e17e9f1c29.png" title="">
+<img data-align="center" width="527" alt="Screen Shot 2022-05-26 at 12.20.08 AM.png" src="https://www.dropbox.com/s/vk0vwfw8tz0ghl2/main.png?raw=1" title="">
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fig 1. React is a combination of HTML, CSS, and JavaScript.</p>
+
+
 <h4 class="atx" id="declarative-approach">Declarative approach:</h4>
-<p>With React, you will always define the desired target state(s) and let React figure out the actual JavaScript DOM instructions.</p>
+<p>With React, you will always define the desired target state(s) and let React figure out the actual JavaScript DOM instructions which update what shows on the screen.. React uses a declarative paradigm that makes it easier to reason about your application and aims to be both efficient and flexible. It designs simple views for each state in your application, and will also efficiently update and render just the right component when your data changes.</p>
 <h2 class="atx" id="creating-a-react-project">Creating a React Project</h2>
 <p>Use the create-react-app repository from Facebook to create a project. [</p>
 <p>Here is the documentation for create-react-app: <a href="https://create-react-app.dev/docs/getting-started">Download create-react-app</a></p>
@@ -1247,8 +1249,9 @@ npx create-react-app my-app
 <span class="token builtin class-name">cd</span> my-app
 <span class="token function">yarn</span> start</code></pre>
 <p>Following either of the above instructions will show the addresses where the app is being deployed.</p>
-<p><img data-align="center" width="682" alt="Screen Shot 2022-05-29 at 2.26.55 PM.png" src="file:///Users/renegade/Library/Application%20Support/marktext/images/8e5865d20abbf7ab8975f9e473ddbe1d5bf53d71.png" title="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fig 2. Successful deployment message.</p>
-<p>⚠️ To install dependencies from a downloaded project, you can run in the directory where the project is stored.</p>
+<img data-align="center" width="682" alt="Screen Shot 2022-05-29 at 2.26.55 PM.png" src="https://www.dropbox.com/s/jfjwyrau88xjuuq/deploy.png?raw=1" title="">
+
+<p><br><br></p>
 <pre><code class="fenced-code-block language-bash"><span class="token function">yarn</span></code></pre>
 <p>🔮 If you don't have Yarn installed, you can install it with the following command: </p>
 <pre><code class="fenced-code-block language-bash"><span class="token comment"># install Yarn</span>
@@ -1260,7 +1263,9 @@ the npm client or other package managers while remaining compatible with the npm
 <h2 class="atx" id="analyzing-a-standard-react-project">Analyzing a Standard React Project</h2>
 <p>After creating a new project from <a href="https://github.com/academind/react-complete-guide-code/tree/03-react-basics-working-with-components/code">this link</a>, we see the following: </p>
 <h3 class="atx" id="the-src-folder">The <code>src</code> Folder</h3>
-<p><img data-align="center" width="359" alt="Screen Shot 2022-05-29 at 2.50.38 PM.png" src="file:///Users/renegade/Library/Application%20Support/marktext/images/d75ce68cc013f73349a573e2dedc7031c5f9731e.png" title="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fig 3. src file tree. </p>
+<img data-align="center" width="409" alt="Screen Shot 2022-05-29 at 2.50.38 PM.png" src="https://www.dropbox.com/s/a88qxajtm1yal89/src.png?raw=1" title="">
+
+<p><br><br></p>
 <h4 class="atx" id="indexjs">index.js</h4>
 <p><strong>index.js</strong> is the first code file which will be executed. (Behind the scenes, <code>yarn start</code> transforms our JavaScript files so that the application can run properly.)</p>
 <pre><code class="fenced-code-block language-javascript"><span class="token comment">// index.js</span>
@@ -1274,10 +1279,17 @@ root<span class="token punctuation">.</span><span class="token function">render<
 <h6 class="atx" id="lets-take-a-look-at-this-file-in-more-detail">Lets take a look at this file in more detail:</h6>
 <pre><code class="fenced-code-block language-javascript"><span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom/client'</span><span class="token punctuation">;</span></code></pre>
 <p><strong>ReactDOM</strong> is being imported from the <strong>react-dom</strong> library which is one of our dependencies in <strong>package.json</strong> which is downloaded and installed locally. This simply makes the feature that is exposed by the library available inside the <strong>index.js</strong> file. </p>
-<img data-align="center" width="374" alt="Screen Shot 2022-05-29 at 3.13.52 PM.png" src="file:///Users/renegade/Library/Application%20Support/marktext/images/9ddef71e476ed838a957eed321f3734d4a864525.png" title="">
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fig 3. Dependencies list in package.json.</p>
-<p>📝 <strong>react</strong> and <strong>react-dom</strong> together form the React libary. </p>
+<pre><code class="fenced-code-block language-json"> <span class="token comment">// package.json</span>
+ <span class="token property">"dependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"@testing-library/jest-dom"</span><span class="token operator">:</span> <span class="token string">"^5.11.6"</span><span class="token punctuation">,</span>
+    <span class="token property">"@testing-library/react"</span><span class="token operator">:</span> <span class="token string">"^11.2.2"</span><span class="token punctuation">,</span>
+    <span class="token property">"@testing-library/user-event"</span><span class="token operator">:</span> <span class="token string">"^12.5.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"react"</span><span class="token operator">:</span> <span class="token string">"^18.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"react-dom"</span><span class="token operator">:</span> <span class="token string">"^18.0.0"</span><span class="token punctuation">,</span>
+    <span class="token property">"react-scripts"</span><span class="token operator">:</span> <span class="token string">"4.0.1"</span><span class="token punctuation">,</span>
+    <span class="token property">"web-vitals"</span><span class="token operator">:</span> <span class="token string">"^0.2.4"</span>
+  <span class="token punctuation">}</span></code></pre>
+<p>📝  <strong>react</strong> and <strong>react-dom</strong> together form the React libary. </p>
 <pre><code class="fenced-code-block language-javascript"><span class="token keyword">import</span> <span class="token string">'./index.css'</span><span class="token punctuation">;</span></code></pre>
 <p>This statement wouldn't normally work in a stand-alone JavaScript file. However in React, this tells the <code>yarn start</code> process that we want to include the css file into our code and inject it into the page we want.</p>
 <pre><code class="fenced-code-block language-javascript"><span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span></code></pre>
@@ -1300,9 +1312,9 @@ root<span class="token punctuation">.</span><span class="token function">render<
 <p>This file contains a function named <code>App</code> which is later exported so that it can be imported in <strong>index.js</strong>. The function returns html code (which is React code, not traditional JavaScript code.) This is JSX syntax.</p>
 <h3 class="atx" id="the-public-folder">The <code>public</code> Folder</h3>
 <p>We will rarely work in this folder, but it holds <strong>index.html</strong>. It is the single html file that is loaded by the browser. Since it's an SPA(single page application), it has a single html file and all subsequent changes on the user interface on the webpage will be handled by React. This html file is where the React-driven UI will be rendered into. </p>
-<img data-align="center" width="353" alt="Screen Shot 2022-05-29 at 3.22.24 PM.png" src="file:///Users/renegade/Library/Application%20Support/marktext/images/b4cef268cf7ce227c1964037ced817674162b86a.png" title="">
+<img data-align="center" width="353" alt="Screen Shot 2022-05-29 at 3.22.24 PM.png" src="https://www.dropbox.com/s/sy0hekjgmj6byn8/public.png?raw=1" title="">
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fig 4. public file tree.</p>
+<p><br><br></p>
 <h3 class="atx" id="indexhtml">index.html</h3>
 <pre><code class="fenced-code-block language-html"><span class="token comment">&lt;!-- index.html--&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
@@ -1319,9 +1331,211 @@ root<span class="token punctuation">.</span><span class="token function">render<
       To create a production bundle, use `npm run build` or `yarn build`.
     --&gt;</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span></code></pre>
-<p>Fig 5. Body of the index.html</p>
 <p>This contains a div with id = <code>root</code> where we want to inject our React-driven UI. (this is referenced in <strong>index.js</strong>)</p>
 <h2 class="atx" id="introducing-jsx">Introducing JSX</h2>
+<p>JSX is a syntax extension to JavaScript which produces React “elements”. I recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+<pre><code class="fenced-code-block language-jsx"><span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">Object</span><span class="token punctuation">(</span>react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__<span class="token punctuation">[</span><span class="token string">"jsxDEV"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    children<span class="token operator">:</span> <span class="token comment">/*#__PURE__*/</span><span class="token function">Object</span><span class="token punctuation">(</span>react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__<span class="token punctuation">[</span><span class="token string">"jsxDEV"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">"h2"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      children<span class="token operator">:</span> <span class="token string">"Let's get started!"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      fileName<span class="token operator">:</span> _jsxFileName<span class="token punctuation">,</span>
+      lineNumber<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+      columnNumber<span class="token operator">:</span> <span class="token number">7</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">void</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    fileName<span class="token operator">:</span> _jsxFileName<span class="token punctuation">,</span>    lineNumber<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    columnNumber<span class="token operator">:</span> <span class="token number">5</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>The <code>App()</code> function that we wrote earlier, looks like the above when we inspect the application in the browser. This is the work of JSX. Under the hood, React will process the JSX and it will transform it into JavaScript that the browser will be able to interpret. So we're writing JSX, but in the end there's a translation step that makes it digestible to a JavaScript interpreter. React gives us this interface for one reason: <strong>it's easier to build UI interfaces using JSX</strong>. </p>
+<h2 class="atx" id="building-a-first-component">Building a First Component</h2>
+<p>A <strong>Component</strong> is one of the core building blocks of React. In other words, we can say that every application you will develop in React will be made up of pieces called components. Components make the task of building UIs much easier. You can see a UI broken down into multiple individual pieces called components and work on them independently and merge them all in a parent component which will be your final UI.</p>
+<p>Think of your HTML code as a tree. In fact, that is exactly how the browser treats your DOM (your rendered HTML on the browser). React allows you to effectively re-construct your DOM in JavaScript and push only those changes to the DOM which have actually occurred. (components can be embedded in other components. App is the only component rendered directly onto the html page.)</p>
+<img data-align="center" width="653" alt="asd" src="https://www.dropbox.com/s/6so4qhg9h6x1x4c/componentTree.png?raw=1" title="">
+
+<p><br><br></p>
+<p>Components in React basically return a piece of JSX code that tells what should be rendered on the screen. Components are <strong>independent and reusable bits of code</strong>. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Functional components. Components are special types of JavaScript Functions.</p>
+<p>🔮 It is considered good practice to have one file per component. It may impl y having 100s and 1000s of component files but this is to be expected.</p>
+<p>Continuing, we will add a folder named <code>components</code> in the <code>src</code> directory to our current project structure. This is where we will store the created components</p>
+<p>When naming component files, it is common practice to use PascalCase</p>
+<p>For educational purposes, we will be creating an expense tracking app. </p>
+<h3 class="atx" id="component-creation">Component Creation</h3>
+<ol>
+<li><p>To begin with, create the component <code>ExpenseItem</code> inside the <code>components</code> directory mentioned earlier.</p>
+</li>
+<li><p>Add the following component code:</p>
+<pre><code class="fenced-code-block language-jsx"><span class="token comment">// ExpenseItem.js</span>
+<span class="token keyword">function</span> <span class="token function">ExpenseItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Expense Item!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> ExpenseItem<span class="token punctuation">;</span></code></pre>
+<p>This declares and implements the <code>ExpenseItem</code> component.  Also, it exports the component as the default export.</p>
+</li>
+<li><p>Import the <code>ExpenseItem</code> component from the <code>components</code> folder in the <strong>App.js</strong> file.</p>
+<pre><code class="fenced-code-block language-javascript"><span class="token comment">//App.js</span>
+<span class="token keyword">import</span> ExpenseItem <span class="token keyword">from</span> <span class="token string">"./components/ExpenseItem"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Let's <span class="token keyword">get</span> started<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>This is also visible<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>ExpenseItem<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>ExpenseItem<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre>
+<p>This imports the <code>ExpenseItem</code> components and injects it into the JSX return body of the function. </p>
+</li>
+</ol>
+<img data-align="center" width="351" alt="a" src="https://www.dropbox.com/s/9mlo30i38g1qt9i/firstcomp.png?raw=1" title="">
+
+<p><br><br></p>
+<p>This is what we see when we refresh the page (assuming it is still runnong on localhost).</p>
+<h2 class="atx" id="writing-more-complex-jsx-code">Writing More Complex JSX Code</h2>
+<p>In our <code>ExpenseItem</code> component, we can only see a title. Let's modify it so that we can display some more information in the component..</p>
+<p>⚠️ We must be careful when designing components since only one root element can be returned per component.</p>
+<p>Since we can only return one root element in a React component, we can do the following:</p>
+<ul>
+<li>Wrap everything between <code>&lt;div&gt; &lt;/div&gt;</code></li>
+</ul>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">function</span> <span class="token function">Pets</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Dog <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Cat <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>Return an array of JSX elements</li>
+</ul>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">function</span> <span class="token function">Pets</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>
+      <span class="token operator">&lt;</span>Dog <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>
+      <span class="token operator">&lt;</span>Cat <span class="token operator">/</span><span class="token operator">&gt;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li>Use a Fragment</li>
+</ul>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">function</span> <span class="token function">Pets</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Fragment<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Dog <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>Cat <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Fragment<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>A React Fragment works like the <code>div</code> element we added before, but it’s not going to appear in the resulting HTML rendered to the browser. Win-win. We will discuss this more in detail later.</p>
+<p>⚠️ In order to use <code>Fragment</code> above, we must add the following import:</p>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Fragment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span></code></pre>
+<p>After modifying our <code>ExpenseItem</code> component, we have the following:</p>
+<pre><code class="fenced-code-block language-javascript"><span class="token comment">// ExpenseItem.js</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Fragment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">ExpenseItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Fragment<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>May <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">2022</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>h2<span class="token operator">&gt;</span>Car Insurance<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>$<span class="token number">289.33</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Fragment<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> ExpenseItem<span class="token punctuation">;</span></code></pre>
+<p>This is what the webpage looks like now, but it looks bland. We need to add some styling. </p>
+<img data-align="center" width="432" alt="as" src="https://www.dropbox.com/s/vwov00ok1i9cz1j/dtailComp.png?raw=1" title="">
+
+<p><br><br></p>
+<h2 class="atx" id="adding-basic-css-style">Adding Basic CSS Style</h2>
+<p>In React, we add CSS files next to the component JavaScript files in the <code>component</code> directory. </p>
+<p>Lets add a <code>ExpenseItem.css</code> file. </p>
+<pre><code class="fenced-code-block language-css"><span class="token selector">.expense-item</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 2px 8px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.25<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0.5rem<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 1rem 0<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #4b4b4b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.expense-item__description</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">gap</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+  <span class="token property">flex-flow</span><span class="token punctuation">:</span> column-reverse<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.expense-item h2</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #3a3a3a<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0 1rem<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.expense-item__price</span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #40005d<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid white<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0.5rem<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 580px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.expense-item__description</span> <span class="token punctuation">{</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.expense-item__description h2</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.expense-item__price</span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.25rem<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0.5rem 1.5rem<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Once this is created, we have to tell the component about this CSS file by adding the following import to the <code>ExpenseItem</code> component.</p>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">import</span> <span class="token string">"./ExpenseItem.css"</span><span class="token punctuation">;</span></code></pre>
+<p>This tells the build process that the CSS file must be considered.</p>
+<p>Now, we have to add the CSS attribute to the html elements to give it the desired look. However, instead of using the <code>class</code> attribute, we use <code>className'</code>. </p>
+<pre><code class="fenced-code-block language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Fragment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./ExpenseItem.css"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">ExpenseItem</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Fragment<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"expense-item"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>May <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">2022</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h2 className<span class="token operator">=</span><span class="token string">"expense-item__description"</span><span class="token operator">&gt;</span>Car Insurance<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">"expense-item__price"</span><span class="token operator">&gt;</span>$<span class="token number">289.33</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Fragment<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> ExpenseItem<span class="token punctuation">;</span></code></pre>
+<p>This is what our application looks like now: (I've changed the <strong>index.css</strong> so that the background is different. [<code>background-color: #FFFBac;</code>].</p>
+<img data-align="center" width="542" alt="ads" src="https://www.dropbox.com/s/0a7sj7a6343uf60/FIRSTCOMPYEL.png?raw=1" title="">
+
+<p><br><br></p>
+<h2 class="atx" id="outputting-dyanmic-data-amp-working-with-expressions-in-jsx">Outputting Dyanmic Data &amp; Working With Expressions in JSX</h2>
 </article>
 </body>
 </html>
